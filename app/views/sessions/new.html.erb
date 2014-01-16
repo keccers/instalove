@@ -1,11 +1,19 @@
-<% if @error %>
-  <p><%= @error %></p>
-<% end %>
+<div class="row top-space-5 space-5">
+	<div id="login" class='small-12 large-6 small-centered columns'>
+		<div class='row'>
+			<% if @error %>
+			  <p class='text-center'><%= @error %></p>
+			<% end %>
 
-<%= form_for :user do |f| %>
-<%= f.label :email, "Email" %>
-<%= f.text_field :email %>
-<%= f.label :password, "Password" %>
-<%= f.password_field :password %>
-<%= f.submit "Sign In" %>
-<% end %>
+			<h1 class='text-center'>instalove</h1>
+
+			<%= form_for :user, :html => {:class => "small-12 columns"} do |f| %>
+			<%= f.label :email, "Email" %>
+			<%= f.text_field :email %>
+			<%= f.label :password, "Password" %>
+			<%= f.password_field :password %>
+			<%= f.submit "Sign In" %>
+			<% end %>
+		</div>
+	</div>
+</div>
