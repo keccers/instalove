@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     user = User.find_by_email(params[:user][:email])
     if user && user.authenticate(params[:user][:password])
       session[:user_id] = user.id
-      redirect_to root_url
+      redirect_to feeds_path
     else
       @error = "Invalid Login"
       render "new"
@@ -18,5 +18,5 @@ class SessionsController < ApplicationController
     session[:user_id] = nil
     redirect_to root_url
   end
-  
+
 end
