@@ -26,4 +26,12 @@ Instalove::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+
+  SECRETS = YAML.load_file("#{Rails.root.to_s}/config/secrets.yml")[Rails.env]
+
+  #Configure Instagram
+  Instagram.configure do |config|
+    config.client_id = SECRETS['instagram']['client_id']
+  end
+
 end
