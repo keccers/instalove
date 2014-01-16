@@ -37,6 +37,12 @@ end
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.1.2'
 
+
+group :development do
+  gem 'rails_layout' #To automatically generate Foundation files
+  gem 'debugger' #Duh. 
+end
+
 # Use unicorn as the app server
 # gem 'unicorn'
 
