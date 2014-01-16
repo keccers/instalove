@@ -17,6 +17,12 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
 
+#Use Hashie for storing secret keys
+gem 'hashie'
+
+#Use Instagram to find photos!
+gem 'instagram'
+
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -36,6 +42,12 @@ end
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.1.2'
+
+
+group :development do
+  gem 'rails_layout' #To automatically generate Foundation files
+  gem 'debugger' #Duh. 
+end
 
 # Use unicorn as the app server
 # gem 'unicorn'

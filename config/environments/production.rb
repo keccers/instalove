@@ -77,4 +77,10 @@ Instalove::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+    #Configure Instagram
+  Instagram.configure do |config|
+    config.client_id = ENV['instagram']
+  end
+
 end

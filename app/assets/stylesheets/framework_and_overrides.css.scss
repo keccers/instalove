@@ -1,0 +1,75 @@
+// import the CSS framework
+@import "foundation";
+@import "vars";
+@import "fonts";
+@import "home_screen";
+
+body {
+  background: url('/special-delivery.jpg');
+}
+
+h1 {
+
+}
+
+// Spacing to the bottom
+.space-1{ margin-bottom: emCalc(10px) !important;}
+.space-1-5{ margin-bottom: emCalc(15px) !important;}
+.space-2{ margin-bottom: emCalc(20px) !important;}
+.space-3{ margin-bottom: emCalc(30px) !important;}
+.space-4{ margin-bottom: emCalc(40px) !important;}
+.space-4-5{ margin-bottom: emCalc(43px) !important;}
+.space-5{ margin-bottom: emCalc(50px) !important;}
+
+.top-space-1{ margin-top: emCalc(10px) !important;}
+.top-space-2{ margin-top: emCalc(20px) !important;}
+.top-space-3{ margin-top: emCalc(30px) !important;}
+.top-space-4{ margin-top: emCalc(40px) !important;}
+.top-space-5{ margin-top: emCalc(50px) !important;}
+
+
+// override for the 'Home' navigation link
+.top-bar .name {
+  font-size: rem-calc(13);
+  line-height: 45px; }
+.top-bar .name a {
+  font-weight: normal;
+  color: $grey;
+  padding: 0 15px; }
+
+// THESE ARE EXAMPLES YOU CAN MODIFY
+// create mixins using Foundation classes
+@mixin twelve-columns {
+  @extend .small-12;
+  @extend .columns;
+  }
+@mixin six-columns-centered {
+  @extend .small-6;
+  @extend .columns;
+  @extend .text-center;
+  }
+// create your own classes
+// to make views framework-neutral
+.column {
+  @include six-columns-centered;
+  }
+.form {
+  @include grid-column(6);
+  }
+.form-centered {
+  @include six-columns-centered;
+  }
+.submit {
+  @extend .button;
+  @extend .radius;
+  }
+// apply styles to HTML elements
+// to make views framework-neutral
+main {
+  // @include twelve-columns;
+  }
+
+section {
+  @extend .row;
+  margin-top: 20px;
+  }
