@@ -1,4 +1,5 @@
 class Photo < ActiveRecord::Base
-#belongs to user
+	belongs_to :user
+	belongs_to :feed
 
 end
