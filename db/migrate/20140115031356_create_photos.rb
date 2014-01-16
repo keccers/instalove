@@ -7,7 +7,8 @@ class CreatePhotos < ActiveRecord::Migration
       	t.text :filter
       	t.text :description
       	t.integer :likes
-    	t.integer :user_id, null: false
+    	  t.integer :user_id, null: false
+        t.integer :feed_id, null: false
     	t.timestamps
     end
   end
