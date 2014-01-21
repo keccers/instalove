@@ -1,0 +1,14 @@
+<% if @error %>
+  <p class='large-6 small-centered columns text-center alert-box round alert top-space-1'><%= @error %></p>
+<% end %>
+
+<h1>Create a new search</h1>
+
+<%= form_for @search do |f|%>
+    Title: <%= f.text_field :title %>
+    Description: <%= f.text_field :description %>
+	Tags: <%= f.text_field :search_terms %>
+	Tag Search: <%= f.check_box :is_tag_search %>
+	User Search: <%= f.check_box :is_user_search %>
+  <%= f.submit %>
+<% end %>
