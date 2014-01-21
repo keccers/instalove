@@ -66,6 +66,17 @@ main {
 
 header {
   background-color: $grey;
+  height: 2em;
+  position: static;
+
+  ul {
+    float: left;
+  }
+
+  a {
+    font-size: .9em;
+    text-align: left;
+  }
 }
 
 section {

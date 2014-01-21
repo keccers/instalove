@@ -2,7 +2,7 @@
 
 <% if @feeds %>
 <% @feeds.each do |feed| %>
-	<%= link_to feed.title, feed %>
+	<p><%= link_to feed.title, feed %></p>
 <% end %>
 <% end %>
 
@@ -10,6 +10,6 @@
 
 <% if @searches %>
 <% @searches.each do |search| %>
-	<%= link_to search.title, search %>
+	<p><%= link_to search.title, search %></p>
 <% end %>
 <% end %>

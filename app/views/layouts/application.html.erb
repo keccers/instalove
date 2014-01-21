@@ -13,13 +13,15 @@
   </head>
   <body>
     <header>
-      <p>Welcome, <%= @current_user.name %></p>
-      <a href="/feeds" alt="Go to my dashboard, post haste!">Dashboard</a>
-      <a href="/logout" alt="Log me out, I'm done here.">Logout</a>
 
-      <%= link_to "Start A New Search", new_search_path %>
-      <%= link_to "Create A New Feed", new_feed_path %>
-      <%= link_to "See All Of My Photos", photos_path %>
+
+      <ul>
+      <li><a href="/feeds" alt="Go to my dashboard, post haste!">Dashboard</a> | </li>
+      <li><%= link_to "Start A New Search", new_search_path %> | </li>
+      <li><%= link_to "Create A New Feed", new_feed_path %> | </li>
+      <li><%= link_to "See All Of My Photos", photos_path %> | </li>
+      <li><a href="/logout" alt="Log me out, I'm done here.">Logout</a></li>
+      </ul>
     </header>
     <main role="main">
        <%= render 'layouts/messages' %>
