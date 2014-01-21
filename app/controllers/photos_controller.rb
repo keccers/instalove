@@ -5,20 +5,23 @@ class PhotosController < ApplicationController
     @photos = current_user.photos.all
   end
 
-  def create
-  end
-
-  def new
-  end
-
   def show
+     @photo = Photo.find_by_id(params[:id])
+     @feeds = current_user.feeds.load
   end
 
   def edit 
+    @photo = Photo.find_by_id(params[:id])
+    @feeds = current_user.feeds.load
   end
 
   def update
-    
+   @photo = Photo.find(params[:id])
+    if @photo.update_attributes(params[:photo])
+      redirect_to @photo
+    else
+      render :edit
+    end
   end
 
   def destroy

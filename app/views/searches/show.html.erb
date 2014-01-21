@@ -1,13 +1,13 @@
 <h1><%= @search.title %></h1>
 <h3><%= @search.search_type %></h3>
 
-<ul>
+<ul class="cbp-rfgrid">
 	<% @photos.each do |photo| %>
 		<li>
 			<a href="<%= photo.url %>" target='_blank' alt="<%= photo.description %>">
 			<img src="<%= photo.photo_url %>">
 			</a>
-			Add To Feed: 
+			<%= link_to photo.insta_id, edit_photo_path(photo) %>
 		</li>
 	<% end %>
 </ul>

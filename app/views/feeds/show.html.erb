@@ -1,6 +1,9 @@
 <h1> <%= @feed.title %> </h1>
+<h2><%= @feed.description %></h2>
 
+<ul class="cbp-rfgrid">
 <% @photos.each do |photo| %>
 	<li><a href="<%= photo.url %>" target='_blank' alt="<%= photo.description %>">
 		<img src="<%= photo.photo_url %>"></li></a>
 <% end %>
+</ul>

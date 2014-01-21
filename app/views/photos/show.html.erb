@@ -1,0 +1,13 @@
+<a href="<%= @photo.url %>" target='_blank' alt="<%= @photo.description %>">
+	<img src="<%= @photo.photo_url %>">
+</a>
+
+<%= form_for @photo do |f| %>
+	<%= hidden_field_tag "photo[feed_ids][]", nil %>
+	<% @feeds.each do |feed| %>
+	  <%= check_box_tag "photo[feed_ids][]", feed.id, @photo.feed_ids.include?(feed.id), id: dom_id(feed) %>
+	  <%= label_tag dom_id(feed), feed.title %><br>
+	<% end %>
+	<%= f.submit %>
+<% end %>
+
