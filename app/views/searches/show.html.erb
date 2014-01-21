@@ -1,0 +1,16 @@
+<h1><%= @search.title %></h1>
+<h3><%= @search.search_type %></h3>
+
+<ul>
+	<% @photos.each do |photo| %>
+		<li>
+			<a href="<%= photo.url %>" target='_blank' alt="<%= photo.description %>">
+			<img src="<%= photo.photo_url %>">
+			</a>
+			Add To Feed: 
+		</li>
+	<% end %>
+</ul>
+
+
+

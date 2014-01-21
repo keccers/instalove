@@ -1,5 +1,7 @@
 class Feed < ActiveRecord::Base
-	has_many :photos
-	has_many :users, :through => :photos
+	belongs_to :user
+	has_and_belongs_to_many :photos
+
+	attr_accessible :title
 
 end

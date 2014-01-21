@@ -7,7 +7,9 @@ Instalove::Application.routes.draw do
   post    '/' => 'sessions#create', :as => :login
   delete '/logout' => 'sessions#destroy', :as => :logout
 
+  resources :searches
   resources :feeds
+  resources :photos
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
