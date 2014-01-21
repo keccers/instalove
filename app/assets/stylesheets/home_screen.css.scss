@@ -1,5 +1,9 @@
+body.homepage {
+  background: url('/special-delivery.jpg');
+}
+
 #login {
 	background-color: #fff;
 	padding-bottom: emCalc(50px);
-	h1 { padding: 0;}
+	h1 { font-size: 7em; padding: 0;}
 }
