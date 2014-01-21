@@ -1,0 +1,11 @@
+<% if @error %>
+  <p class='large-6 small-centered columns text-center alert-box round alert top-space-1'><%= @error %></p>
+<% end %>
+
+<h1>Create a new feed</h1>
+
+<%= form_for @feed do |f|%>
+    Title: <%= f.text_field :title %>
+    Description: <%= f.text_field :description %>
+  <%= f.submit %>
+<% end %>

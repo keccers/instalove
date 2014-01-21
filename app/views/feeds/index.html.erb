@@ -1,3 +1,15 @@
+<h1>My Feeds</h1>
+
+<% if @feeds %>
 <% @feeds.each do |feed| %>
-	<p><%= feed.title %></p>
+	<%= link_to feed.title, feed %>
+<% end %>
+<% end %>
+
+<h1>My Searches</h1>
+
+<% if @searches %>
+<% @searches.each do |search| %>
+	<%= link_to search.title, search %>
+<% end %>
 <% end %>

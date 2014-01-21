@@ -1,0 +1,6 @@
+<h1> <%= @feed.title %> </h1>
+
+<% @photos.each do |photo| %>
+	<li><a href="<%= photo.url %>" target='_blank' alt="<%= photo.description %>">
+		<img src="<%= photo.photo_url %>"></li></a>
+<% end %>
