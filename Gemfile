@@ -49,6 +49,17 @@ group :development do
   gem 'debugger' #Duh. 
 end
 
+group :test do
+  gem 'rspec-rails'
+  gem 'factory_girl_rails', '~> 4.2.1', :require => false
+  gem 'database_cleaner'
+  gem 'capybara'
+  gem 'simplecov'	
+  gem 'faker'
+  gem 'selenium-webdriver'
+  gem 'debugger' #Duh. 
+end
+
 gem 'rails_12factor', group: :production
 
 ruby "2.0.0"
